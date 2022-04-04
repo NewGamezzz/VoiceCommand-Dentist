@@ -1,0 +1,11 @@
+.ipynb_checkpoints/
+11-2-22/
+backup/
+label/
+out/
+predicted/
+shortAudio/
+spectral-gate/
+gating_param.docx
+original_voice_command.mp3
+test.mp3
