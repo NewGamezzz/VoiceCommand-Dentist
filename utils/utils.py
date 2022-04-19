@@ -27,7 +27,7 @@ def cut_audio(audio_path, out_path, second=10, verbose=False):
     start = samples_wrote
     window = audio[start:stop]
     
-    out_file.append(os.path.join(out_path, filename + '_' + str(idx) + '.wav'))
+    out_file.append(os.path.join(out_path, filename + '_' + str(idx) + '.mp3'))
     wavfile.write(out_file[-1], sr, window.astype('f4'))
     if verbose:
       print(f"Start:{start/sr} Stop: {stop/sr}")
@@ -60,7 +60,7 @@ def SpectralGate(audio_path, out_path, increase_volume=False, config={}):
   if increase_volume:
     reduced_noise *= 3
     reduced_noise = np.clip(reduced_noise, -1., 1.)
-  wavfile.write(os.path.join(out_path, filename + '.wav'), sr, reduced_noise.astype('f4')) # <= previous work multiply by 3 before save
+  wavfile.write(os.path.join(out_path, filename + '.mp3'), sr, reduced_noise.astype('f4')) # <= previous work multiply by 3 before save
 
 def Speech2TextAPI(
   filepath,

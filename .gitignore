@@ -3,6 +3,7 @@
 backup/
 label/
 out/
+test/
 predicted/
 shortAudio/
 spectral-gate/
